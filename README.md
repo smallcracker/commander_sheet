@@ -10,7 +10,7 @@
 
 ## 📥 安装与运行
 ```bash
-git clone https://github.com/yourusername/commander-sheet.git
+git clone https://github.com/smallcracker/commander_sheet.git
 cd commander-sheet
 ```
 
