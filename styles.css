@@ -1,0 +1,175 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.build-area, .saved-area {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+#commandNote {
+    width: 100%;
+    height: 60px;
+    margin: 5px;
+    padding: 8px;
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.delete-btn {
+    background-color: #ff4444;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+.command-note {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-style: italic;
+}
+.command-input {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+}
+
+.command-actions, .file-actions {
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.saved-command {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#commandName {
+    padding: 8px;
+    margin: 5px;
+    width: 200px;
+}
+
+#csvFile {
+    display: none;
+}
+
+.toast {
+    visibility: hidden;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.command-buttons {
+    display: flex;
+    gap: 10px;
+}
+.input-group {
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.add-input-btn {
+    padding: 4px 8px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    min-width: 25px;
+    height: 25px;
+}
+
+.add-input-btn:hover {
+    background-color: #45a049;
+}
+.command-input {
+    margin: 0;
+}
+/* AI 区域样式 */
+.ai-area {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.ai-config {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ai-config input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ai-prompt {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#promptInput {
+    flex: 1;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.ai-output {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    min-height: 100px;
+    white-space: pre-wrap;
+}

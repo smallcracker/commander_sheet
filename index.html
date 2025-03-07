@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命令行构建器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 区域一：命令构建区 -->
+        <div class="build-area">
+            <h2>构建命令</h2>
+            <div id="inputContainer">
+                <button onclick="addInput()">添加输入框</button>
+            </div>
+            <div class="command-actions">
+                <input type="text" id="commandName" placeholder="命令名称">
+                <textarea id="commandNote" placeholder="命令备注"></textarea>
+                <button onclick="copyCommand()">复制命令</button>
+                <button onclick="saveCommand()">保存命令</button>
+            </div>
+        </div>
+
+        <!-- 区域二：已保存命令显示区 -->
+        <div class="saved-area">
+            <h2>已保存的命令</h2>
+            <div class="saved-commands" id="savedCommands"></div>
+            <div class="file-actions">
+                <button onclick="exportToCSV()">导出到CSV</button>
+                <input type="file" id="csvFile" accept=".csv" onchange="importFromCSV(event)">
+                <button onclick="document.getElementById('csvFile').click()">从CSV导入</button>
+            </div>
+        </div>
+        <!-- 区域三：AI 命令生成 -->
+        <div class="ai-area">
+            <h2>AI 命令生成</h2>
+            <div class="ai-config">
+                <input type="password" id="apiKey" placeholder="API Key">
+                <input type="text" id="apiHost" placeholder="API Host（示例：https://api.openai.com/v1）">
+                <input type="text" id="modelName" placeholder="模型名称（示例：gpt-4）">
+                <button onclick="saveAIConfig()">保存配置</button>
+                <button onclick="testAIConnection()">测试连接</button>
+            </div>
+            <div class="ai-prompt">
+                <textarea id="promptInput" placeholder="输入提示词（示例：如何批量重命名当前目录下的jpg文件）"></textarea>
+                <button onclick="generateCommand()">生成命令</button>
+            </div>
+            <div class="ai-output" id="aiOutput"></div>
+        </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
